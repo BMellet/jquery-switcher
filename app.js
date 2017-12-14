@@ -3,8 +3,58 @@ var species = {
 	bear   : "bear.jpg",
 	fish   : "fish.jpg"
 };
+ //var esp = $(".button").attr('data-animal');
+	// console.log(esp);
 
-function main(){
+function main()
+{
+	 
+
+
+	  $(".button").each(function()
+		 {
+		 	$(this).click(function()
+		 	{
+				var x = $ (this).attr('data-animal') ;
+
+				console.log(x);
+
+				switch(x) 
+
+		     	{
+		    	case 'cat':
+		        
+		        	$("#holder").html ( '<img src="img/'+ species.cat + '">' );
+
+		        break;
+
+		    	case 'bear':
+
+		    	$("#holder").children().remove();
+
+		        $("#holder").html( '<img src="img/'+ species.bear + '">' );
+		        
+		        break;
+
+		    	case 'fish':
+
+		    	$("#holder").children().remove();
+		    	
+		        $("#holder").html ( '<img src="img/'+ species.fish + '">' );
+		        break;
+				}
+			});
+		});
+
+	
+	     
+
+     function img(i)
+     {
+     	 
+        
+	} 
+      
 	/* 
 	tout votre code doit se trouver dans cette fonction,
 	vous pouvez biensur créer d'autres fonctions si nécessaire
